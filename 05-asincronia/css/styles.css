@@ -1,0 +1,209 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* =========================
+   COLORES (PALETA)
+========================= */
+:root {
+  --color-dark: #462C7D;
+  --color-primary: #831C91;
+  --color-secondary: #D552A3;
+  --color-accent: #FF70BF;
+  --color-bg: #F4F4F4;
+  --color-text: #2D2D2D;
+  --color-white: #FFFFFF;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* =========================
+   CONTENEDORES
+========================= */
+.page {
+  padding: 20px;
+}
+
+.container {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+h1, h2 {
+  margin-bottom: 15px;
+  color: var(--color-dark);
+}
+
+/* =========================
+   BOTONES
+========================= */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+button:hover {
+  background: var(--color-secondary);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* =========================
+   LOGS
+========================= */
+/* =========================
+   LOGS
+========================= */
+.log {
+  background: linear-gradient(135deg, #462C7D, #831C91);
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  height: 150px;
+  overflow-y: auto;
+  font-size: 13px;
+}
+
+.log-item {
+  margin-bottom: 5px;
+}
+
+.log-info {
+  color: #ddd;
+}
+
+.log-success {
+  color: #4CAF50;
+}
+
+.log-error {
+  color: #FF5252;
+}
+
+.log-warning {
+  color: #FFC107;
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+.resultados {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  color: white;
+  display: none;
+}
+
+.resultados.visible {
+  display: block;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.form-group {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* =========================
+   TEMPORIZADOR
+========================= */
+.display {
+  font-size: 40px;
+  text-align: center;
+  margin: 15px 0;
+  color: var(--color-dark);
+  font-weight: bold;
+}
+
+/* alerta (últimos segundos) */
+.display.alerta {
+  color: var(--color-accent);
+}
+
+/* =========================
+   BARRA DE PROGRESO
+========================= */
+.progress-container {
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  transition: width 0.3s;
+}
+
+/* alerta barra */
+.progress-bar.alerta {
+  background: var(--color-accent);
+}
+
+/* =========================
+   SCROLL BONITO
+========================= */
+.log::-webkit-scrollbar {
+  width: 6px;
+}
+
+.log::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 5px;
+}
