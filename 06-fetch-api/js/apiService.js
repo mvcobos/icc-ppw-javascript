@@ -49,7 +49,9 @@ const ApiService = {
   },
 
   async deletePost(id) {
-    return this.request(`/posts/${id}`, { method: 'DELETE' });
+    return this.request(`/posts/${id}`, { 
+      method: 'DELETE' 
+    });
   },
 
   async getPostsByUser(userId) {

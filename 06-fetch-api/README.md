@@ -73,7 +73,35 @@ Se verifican los headers, payload y respuestas del servidor.
 ---
 
 ### 8. Código (API Service y Componentes)
-![Codigo](assets/08-codigo.png)
+```javascript
+ async getPosts(limit = 10) {
+    return this.request(`/posts?_limit=${limit}`);
+  },
+
+  async getPostById(id) {
+    return this.request(`/posts/${id}`);
+  },
+
+  async createPost(postData) {
+    return this.request('/posts', {
+      method: 'POST',
+      body: JSON.stringify(postData)
+    });
+  },
+
+  async updatePost(id, postData) {
+    return this.request(`/posts/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(postData)
+    });
+  },
+
+  async deletePost(id) {
+    return this.request(`/posts/${id}`, { 
+      method: 'DELETE' 
+    });
+  },
+```
 
 **Descripción:**  
 Se muestran capturas del código implementado:
